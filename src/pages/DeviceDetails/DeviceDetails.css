@@ -1,0 +1,388 @@
+.device-details-page {
+    min-height: 100vh;
+
+    background: var(--color-page-background);
+
+    color: var(--color-text-primary);
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.device-details-content {
+    width: 100%;
+    max-width: var(--content-max-width);
+
+    margin: 0 auto;
+
+    padding: var(--spacing-xl);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.device-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--spacing-lg);
+
+    padding-top: var(--spacing-xl);
+
+    margin-bottom: var(--spacing-xl);
+}
+
+.device-header-left {
+    display: flex;
+    align-items: center;
+
+    gap: var(--spacing-md);
+}
+
+.device-back-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+
+    color: var(--color-text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.device-back-button:hover {
+    background: var(--color-hover);
+
+    border-color: var(--color-primary);
+
+    color: var(--color-primary);
+}
+
+.device-back-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.device-page-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 1px;
+
+    color: var(--color-primary);
+}
+
+.device-page-header h1 {
+    margin: 0 0 4px;
+
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.device-page-header p {
+    margin: 0;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+
+    color: var(--color-text-secondary);
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.device-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    border-radius: var(--radius-md);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+.device-status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+.device-status-online {
+    background: var(--color-success-background);
+
+    color: var(--color-success);
+}
+
+.device-status-offline {
+    background: var(--color-neutral-background);
+
+    color: var(--color-text-secondary);
+}
+
+.device-status-warning {
+    background: var(--color-warning-background);
+
+    color: var(--color-warning);
+}
+
+/* =========================================================
+   INFORMATION GRID
+   ========================================================= */
+
+.device-information-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: var(--spacing-lg);
+}
+
+/* =========================================================
+   INFORMATION CARD
+   ========================================================= */
+
+.device-info-card {
+    padding: var(--spacing-lg);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-device-card);
+}
+
+.device-info-card-header {
+    display: flex;
+    align-items: center;
+
+    gap: var(--spacing-md);
+
+    padding-bottom: var(--spacing-md);
+
+    margin-bottom: var(--spacing-md);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.device-info-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary-soft);
+
+    color: var(--color-primary);
+}
+
+.device-info-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.device-info-card-header h2 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.device-info-card-header p {
+    margin: 3px 0 0;
+
+    font-size: 11px;
+
+    color: var(--color-text-secondary);
+}
+
+/* =========================================================
+   INFO ROW
+   ========================================================= */
+
+.device-info-row {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--spacing-md);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.device-info-row:last-child {
+    border-bottom: 0;
+}
+
+.device-info-row span {
+    font-size: 12px;
+
+    color: var(--color-text-secondary);
+}
+
+.device-info-row strong {
+    font-size: 12px;
+
+    font-weight: 650;
+
+    text-align: right;
+
+    color: var(--color-text-primary);
+}
+
+.monospace {
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   INLINE STATUS
+   ========================================================= */
+
+.inline-status {
+    text-transform: capitalize;
+}
+
+.inline-status-online {
+    color: var(--color-success);
+}
+
+.inline-status-offline {
+    color: var(--color-text-secondary);
+}
+
+.inline-status-warning {
+    color: var(--color-warning);
+}
+
+/* =========================================================
+   DEVICE NOT FOUND
+   ========================================================= */
+
+.device-not-found {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--spacing-xl);
+
+    background: var(--color-page-background);
+
+    text-align: center;
+}
+
+.device-not-found h2 {
+    margin: 0 0 var(--spacing-sm);
+}
+
+.device-not-found p {
+    margin: 0 0 var(--spacing-lg);
+
+    color: var(--color-text-secondary);
+}
+
+.device-not-found button {
+    height: 42px;
+
+    padding: 0 var(--spacing-lg);
+
+    border: 0;
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary);
+
+    color: var(--color-on-primary);
+
+    font-weight: 650;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+    .device-information-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .device-details-content {
+        padding: var(--spacing-lg);
+    }
+
+    .device-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding-top: var(--spacing-lg);
+    }
+
+    .device-page-header h1 {
+        font-size: 24px;
+    }
+
+    .device-info-card {
+        padding: var(--spacing-md);
+    }
+}
