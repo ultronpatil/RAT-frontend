@@ -1,0 +1,471 @@
+/* =========================================================
+   COMMAND PROMPT PAGE
+   ========================================================= */
+
+.command-prompt-page {
+    min-height: calc(100vh - var(--navbar-height));
+
+    margin-left: 70px;
+
+    padding: 24px 32px;
+
+    background: var(--color-page-background);
+    color: var(--color-text-primary);
+
+    box-sizing: border-box;
+}
+
+.command-prompt-content {
+    width: 100%;
+    max-width: var(--content-max-width);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.command-prompt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.command-prompt-header > div {
+    min-width: 0;
+}
+
+.command-page-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 9px;
+    font-weight: 750;
+
+    letter-spacing: 1px;
+
+    color: var(--color-primary);
+}
+
+.command-prompt-header h1 {
+    margin: 0 0 4px;
+
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.command-prompt-header p {
+    margin: 0;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    font-size: 11px;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* =========================================================
+   MANAGED DEVICES BUTTON
+   ========================================================= */
+
+.command-managed-devices-button {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.command-managed-devices-button:hover {
+    background: var(--color-hover);
+
+    border-color: var(--color-primary);
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   TERMINAL CONTAINER
+   ========================================================= */
+
+.command-terminal-container {
+    width: 100%;
+
+    background: #111827;
+
+    border: 1px solid #374151;
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-device-card);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TERMINAL TOOLBAR
+   ========================================================= */
+
+.command-terminal-toolbar {
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    background: #1f2937;
+
+    border-bottom: 1px solid #374151;
+}
+
+.command-terminal-title {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #d1d5db;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.command-terminal-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+   ========================================================= */
+
+.command-clear-button {
+    height: 28px;
+
+    padding: 0 9px;
+
+    border: 1px solid #4b5563;
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #9ca3af;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.command-clear-button:hover {
+    background: #374151;
+
+    border-color: #6b7280;
+
+    color: #f3f4f6;
+}
+
+
+/* =========================================================
+   TERMINAL
+   ========================================================= */
+
+.command-terminal {
+    height: calc(100vh - var(--navbar-height) - 170px);
+
+    min-height: 400px;
+    max-height: 650px;
+
+    padding: 16px;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    background: #111827;
+
+    color: #d1d5db;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   WELCOME MESSAGE
+   ========================================================= */
+
+.command-welcome {
+    margin-bottom: 4px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   TERMINAL LINES
+   ========================================================= */
+
+.terminal-line {
+    white-space: pre-wrap;
+
+    word-break: break-word;
+}
+
+.terminal-line-command {
+    color: #f3f4f6;
+}
+
+.terminal-line-output {
+    margin-bottom: 8px;
+
+    color: #d1d5db;
+}
+
+.terminal-line-error {
+    margin-bottom: 8px;
+
+    color: #f87171;
+}
+
+
+/* =========================================================
+   COMMAND INPUT
+   ========================================================= */
+
+.command-input-line {
+    display: flex;
+    align-items: center;
+
+    min-height: 24px;
+
+    width: 100%;
+}
+
+.command-prompt-symbol {
+    flex-shrink: 0;
+
+    margin-right: 8px;
+
+    color: #22c55e;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    font-weight: 650;
+}
+
+.command-input-line input {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #f3f4f6;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 12px;
+
+    caret-color: #f3f4f6;
+}
+
+.command-input-line input::placeholder {
+    color: #4b5563;
+}
+
+.command-input-line input:disabled {
+    opacity: 0.6;
+
+    cursor: wait;
+}
+
+
+/* =========================================================
+   DEVICE NOT FOUND
+   ========================================================= */
+
+.command-not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: calc(100vh - var(--navbar-height));
+
+    text-align: center;
+}
+
+.command-not-found-content h2 {
+    margin: 0 0 8px;
+}
+
+.command-not-found-content p {
+    margin: 0 0 16px;
+
+    color: var(--color-text-secondary);
+}
+
+.command-not-found-content button {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border: 0;
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+
+    font-weight: 650;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+    .command-prompt-page {
+        padding: 20px 24px;
+    }
+
+    .command-terminal {
+        height: calc(100vh - var(--navbar-height) - 160px);
+
+        min-height: 350px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .command-prompt-page {
+        margin-left: 64px;
+
+        padding: 16px;
+    }
+
+    .command-prompt-header {
+        align-items: flex-start;
+    }
+
+    .command-prompt-header h1 {
+        font-size: 21px;
+    }
+
+    .command-managed-devices-button {
+        height: 36px;
+
+        padding: 0 11px;
+
+        font-size: 10px;
+    }
+
+    .command-terminal {
+        height: 450px;
+
+        min-height: 350px;
+
+        padding: 12px;
+
+        font-size: 11px;
+    }
+
+    .command-terminal-toolbar {
+        height: 40px;
+
+        padding: 0 12px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .command-prompt-page {
+        margin-left: 58px;
+
+        padding: 12px;
+    }
+
+    .command-prompt-header {
+        flex-direction: column;
+    }
+
+    .command-managed-devices-button {
+        align-self: flex-end;
+    }
+
+    .command-terminal {
+        height: 420px;
+
+        min-height: 300px;
+    }
+}

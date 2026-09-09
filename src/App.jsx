@@ -1,9 +1,17 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+    BrowserRouter,
+    Navigate,
+    Route,
+    Routes,
+} from "react-router-dom";
+
 import { useState } from "react";
 
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import DeviceDetails from "./pages/DeviceDetails/DeviceDetails";
+import Logs from "./pages/Logs/Logs";
+import CommandPrompt from "./pages/CommandPrompt/CommandPrompt";
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,10 +28,14 @@ function App() {
         <BrowserRouter>
 
             {!isLoggedIn ? (
+
                 <Login onLogin={handleLogin} />
+
             ) : (
+
                 <Routes>
 
+                    {/* Managed Devices */}
                     <Route
                         path="/"
                         element={
@@ -33,6 +45,7 @@ function App() {
                         }
                     />
 
+                    {/* Device Details */}
                     <Route
                         path="/device"
                         element={
@@ -40,6 +53,15 @@ function App() {
                         }
                     />
 
+                    {/* Device Logs */}
+                    <Route
+                        path="/logs"
+                        element={
+                            <Logs />
+                        }
+                    />
+
+                    {/* Unknown route */}
                     <Route
                         path="*"
                         element={
@@ -49,8 +71,13 @@ function App() {
                             />
                         }
                     />
+                    <Route
+    path="/command"
+    element={<CommandPrompt />}
+/>
 
                 </Routes>
+
             )}
 
         </BrowserRouter>
